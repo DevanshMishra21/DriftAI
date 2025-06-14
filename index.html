@@ -14,10 +14,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 0 1rem;
     }
 
     h1 {
@@ -31,7 +31,7 @@
       margin-bottom: 2rem;
     }
 
-    .button {
+    a.button {
       background-color: #DDD8CC;
       color: #111;
       padding: 0.75rem 1.5rem;
@@ -41,30 +41,16 @@
       font-weight: bold;
       font-size: 1rem;
       transition: background-color 0.3s ease, transform 0.2s ease;
-      cursor: pointer;
     }
 
-    .button:hover {
+    a.button:hover {
       background-color: #cfc8b8;
       transform: scale(1.05);
     }
 
-    #form-container {
-      display: none;
-      margin-top: 2rem;
-      width: 100%;
-      max-width: 600px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 10px;
-    }
-
     footer {
-      margin-top: 3rem;
+      position: absolute;
+      bottom: 1rem;
       font-size: 0.9rem;
       color: #888;
     }
@@ -79,13 +65,8 @@
       h1 {
         font-size: 2.2rem;
       }
-
       p {
         font-size: 1rem;
-      }
-
-      iframe {
-        height: 500px;
       }
     }
   </style>
@@ -95,28 +76,9 @@
   <p>
     Drift connects you to someone new via SMS. Based on vibe. Based on personality. Just text. No pressure.
   </p>
-
-  <!-- ✅ Button to show Typeform -->
-  <button class="button" onclick="showForm()">Start Your Drift</button>
-
-  <!-- ✅ Hidden form container -->
-  <div id="form-container">
-    <iframe src="https://form.typeform.com/to/ByrKiGP2" 
-            allow="camera; microphone; autoplay; encrypted-media;"></iframe>
-  </div>
-
+  <a class="button" href="form.html">Start Your Drift</a>
   <footer>
-    <a href="terms.html">Terms & Conditions</a>
+  <a href="terms.html">Terms & Conditions</a>
   </footer>
-
-  <script>
-    function showForm() {
-      document.getElementById("form-container").style.display = "block";
-      window.scrollTo({
-        top: document.getElementById("form-container").offsetTop - 20,
-        behavior: "smooth"
-      });
-    }
-  </script>
 </body>
 </html>
